@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >
+<suite name = "Madison_NewUserRegistration_productPurchase">
+<listeners>
+      <listener class-name="com.htc.MadisonSite.seleniumUtility.Listerner"></listener>
+</listeners>
+ <test name = "NewRegistration_ValidInvalidLogin_purchaseOrderTest" preserve-order="true">
+ <classes>
+   <class name = "com.htc.MadisonSite.test.SignupTest"> </class>
+   <class name = "com.htc.MadisonSite.test.LoginTest"> 
+         <methods>
+             <include name="testLoginPage_enterCredantials_shouldLoginSuccessful"></include>
+         </methods>
+         <methods>
+             <include name="testBrowserStackSignin_InValidloginCredential_ShouldErrorInSigninPage"></include>
+         </methods>
+   </class>
+  <class name ="com.htc.MadisonSite.test.ProductPurchaseTest"> </class>
+ </classes>
+</test>
+</suite>
